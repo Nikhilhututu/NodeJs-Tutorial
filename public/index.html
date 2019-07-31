@@ -36,7 +36,9 @@
         weatherForm.addEventListener('submit', (e) => {
             e.preventDefault()
             const location = search.value 
-            fetch('http://localhost:3001/webservice?address=' + location)
+            const port = process.env.PORT || 3000
+            // fetch('http://localhost:3001/webservice?address=' + location)
+            fetch('http://localhost:'+port+'/webservice?address=' + location)
             .then((response) => {
             response.json().then((data) => {
              console.log("Response=====1111== "+JSON.stringify(response)+"     "+data)
