@@ -16,9 +16,10 @@ const forecast = require('./forcast')
 const express  = require('express') 
 const path     = require('path') 
 const app      = express()
-app.listen(3001, () =>
+const port = process.env.PORT || 3000
+app.listen(port, () =>
 { 
-   console.log('Server is up on port 3001.') 
+   console.log('Server is up on port '+port) 
 })
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname,  '../index.html'))
