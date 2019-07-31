@@ -8,8 +8,8 @@
 // </html>
 // `;
 let testHTML
-const jsdom     = require("jsdom");
-const { JSDOM } = jsdom;
+// const jsdom     = require("jsdom");
+// const { JSDOM } = jsdom;
 const geocode  = require('./geocode')
 const forecast = require('./forcast')
 const fetch    = require("node-fetch");
