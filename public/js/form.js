@@ -12,7 +12,7 @@ let testHTML
 // const { JSDOM } = jsdom;
 const geocode  = require('./geocode')
 const forecast = require('./forcast')
-const fetch    = require("node-fetch");
+// const fetch    = require("node-fetch");
 const express  = require('express') 
 const path     = require('path') 
 const app      = express()
