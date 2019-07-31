@@ -1,0 +1,60 @@
+ <!-- <h1>{{title}}</h1>  -->
+<!-- <div>   
+      <a href="/">Weather</a>   
+      <a href="/about">About</a>   
+      <a href="/help">Help</a>
+</div>
+<!DOCTYPE html> 
+<html> 
+    <head>   
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="/js/test.js"></script>
+    </head> 
+    <body>
+        <h1>About</h1>
+        <img src="/assets/image.png"> 
+    </body> 
+    <body>
+        <h1>{{title}}</h1>  
+        <p>Created by {{name}}</p>
+     </body>
+</html> -->
+
+<!DOCTYPE html> 
+ <html id = "indexfile"> 
+
+    <form>
+        <input placeholder="Location">
+        <button>Search</button>
+        <p id="message-1"></p>
+    </form>
+    <script >
+        const weatherForm = document.querySelector('form')
+        const search = document.querySelector('input')
+        const messageOne = document.querySelector('#message-1')
+        console.log("weatherForm$$$$     "+weatherForm);
+        weatherForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const location = search.value 
+            fetch('http://localhost:3001/webservice?address=' + location)
+            .then((response) => {
+            response.json().then((data) => {
+             console.log("Response=====1111== "+JSON.stringify(response)+"     "+data)
+            if (data.error){
+                console.log(data.error)
+            } 
+            let resp = JSON.stringify(data)
+            resp = JSON.parse(resp) 
+            
+            if(resp.Response ==="Success")
+                messageOne.textContent = JSON.stringify(data)
+              else
+                messageOne.textContent = JSON.stringify(data)
+            console.log("html======= "+JSON.stringify(data)+"    "+resp.Response)
+        })
+        })
+    })
+
+    </script>
+    
+</html>
