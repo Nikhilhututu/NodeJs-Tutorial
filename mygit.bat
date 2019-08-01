@@ -11,4 +11,6 @@ ECHO ===========pull==File===============
 git pull
 ECHO ===========push heroku==File===============
 git push heroku
+ECHO ===========Open Project===============
+heroku open
 PAUSE
