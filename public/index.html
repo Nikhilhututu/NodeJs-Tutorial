@@ -38,7 +38,7 @@
             const location = search.value 
             // fetch('http://localhost:3001/webservice?address=' + location)
             //fetch('http://localhost:'+port+'/webservice?address=' + location)
-            fetch('192.168.1.11/webservice?address=' + location)
+            fetch('http://192.168.1.11:3001/webservice?address='+location)
             .then((response) => {
             response.json().then((data) => {
              console.log("Response=====1111== "+JSON.stringify(response)+"     "+data)
