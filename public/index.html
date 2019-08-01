@@ -36,7 +36,6 @@
         weatherForm.addEventListener('submit', (e) => {
             e.preventDefault()
             const location = search.value 
-            const port = process.env.PORT || 3000
             // fetch('http://localhost:3001/webservice?address=' + location)
             //fetch('http://localhost:'+port+'/webservice?address=' + location)
             fetch('192.168.1.11/webservice?address=' + location)
